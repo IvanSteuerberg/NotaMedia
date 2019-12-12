@@ -13,16 +13,12 @@ private final String fin="fin";
 Scanner sc = new Scanner(System.in);
 private String msg;
 
-public float validarNotas(){
+public float pedirNotas(){
 do{
-pedirNotas();    
-}while(num>10 || num<0);    
-return num;
-}
-
-public void pedirNotas(){
     System.out.println("Introduce a nota");
     num=sc.nextFloat();
+    }while(num>10 || num<0); 
+return num;
 }
 public void pedirBoletins(){
 do{
@@ -47,11 +43,11 @@ pedirBoletins();
 
 public void calcularNotaMedia(){
 System.out.println("Teorico 1");    
-teorico1=validarNotas();
+teorico1=pedirNotas();
 System.out.println("Teorico 2"); 
-teorico2=validarNotas();
+teorico2=pedirNotas();
 System.out.println("Practico"); 
-notaPractico=validarNotas();
+notaPractico=pedirNotas();
 calcularNotaBoletins();
 notaMedia =(int) Math.round(((teorico1+teorico2)/2*0.4)+notaPractico*0.4+notaBoletins);   
 System.out.println("A nota media é: "+notaMedia);
