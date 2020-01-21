@@ -41,7 +41,7 @@ pedirBoletins();
 }
 
 
-public void calcularNotaMedia(){
+public float calcularNotaMedia(){
 System.out.println("Teorico 1");    
 teorico1=pedirNotas();
 System.out.println("Teorico 2"); 
@@ -51,6 +51,7 @@ notaPractico=pedirNotas();
 calcularNotaBoletins();
 notaMedia =(int) Math.round(((teorico1+teorico2)/2*0.4)+notaPractico*0.4+notaBoletins);   
 System.out.println("A nota media é: "+notaMedia);
+return notaMedia;
 }
 
 public void programa(){
